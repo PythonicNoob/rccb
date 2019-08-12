@@ -1,0 +1,13 @@
+{% extends "category/base.html" %}
+
+{% block content %}
+
+<h1>Latest complaints</h1>
+<ul>
+{% for complaint in complaints %}
+    <li>{{ complaint.complaint_txt }} -- {{ complaint.votes }} vote{{ complaint.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+
+{% endblock%}

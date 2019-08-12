@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'category/style.css' %}">
+    <title>{% block title %}RCCB Category{% endblock %}</title>
+
+</head>
+  <body>
+    <div id="head" class="header">
+        <h1>RCCB</h1>
+    </div>
+
+    <div id="sidenav" class="sidenav">
+        <ul>
+            <li><a href="{% url 'category:home' %}">Home</a></li>
+            {% block sidenav %}
+            {% endblock %}
+        </ul>
+    </div>
+
+
+    <div id="main" class="main">
+
+      <h1> Hello</h1>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
